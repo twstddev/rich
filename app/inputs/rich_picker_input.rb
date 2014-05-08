@@ -12,8 +12,8 @@ if (Object.const_defined?("Formtastic") && Gem.loaded_specs["formtastic"].versio
           :style => editor_options[:style]
         }
 
-        input_wrapping do
-          label_html <<
+        custom_wrapping do
+          custom_label_html <<
           input_field(local_input_options) <<
           button <<
           preview <<

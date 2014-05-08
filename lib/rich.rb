@@ -187,6 +187,10 @@ module Rich
         require 'rich/integrations/legacy_formtastic'
         ::Formtastic::SemanticFormBuilder.send :include, Rich::Integrations::FormtasticBuilder
       end
+
+        require 'rich/integrations/custom_styles'
+        ::Formtastic::Inputs::Base.send :include, Rich::Integrations::CustomStyles
+
     end
 
     if self.backend == :paperclip

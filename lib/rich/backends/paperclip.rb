@@ -6,7 +6,7 @@ module Rich
       extend ActiveSupport::Concern
 
       included do
-        has_attached_file :rich_file,
+        has_mongoid_attached_file :rich_file,
           :styles => Proc.new {|a| a.instance.set_styles },
           :convert_options => Proc.new { |a| Rich.convert_options[a] }
 
